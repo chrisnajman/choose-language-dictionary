@@ -23,7 +23,7 @@ function Page() {
 
       <div
         className={isLanguageSelected ? "" : "hide"}
-        aria-hidden={isLanguageSelected ? "false" : "true"}
+        // aria-hidden={isLanguageSelected ? "false" : "true"}
       >
         <SkipLink />
         <div className="page-container">
