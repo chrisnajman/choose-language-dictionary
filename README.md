@@ -27,9 +27,12 @@ Additionally, in order to generate unique ids, I installed:
 
 ## Deployment
 
-See Dauda Lawal's excellent article:
+See:
 
-- [Deploying a Vite App to GitHub Pages using GitHub Actions: A Step-by-Step Guide](https://dev.to/daslaw/deploying-a-vite-app-to-github-pages-using-github-actions-a-step-by-step-guide-2p4h)
+- [VITE DEPLOY (GitHub)](https://github.com/ErickKS/vite-react-router) and accompanying video:
+- [Vite React App with Routes Deployed on Github | Reload error resolved! (YouTube)](https://youtu.be/uEEj2c3_ydg?si=_ff-nJnaM0Rykmps).
+
+The first half of both the article and the video have the required steps for getting a Vite app (without routing) on to Git Pages.
 
 ---
 
