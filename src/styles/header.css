@@ -1,0 +1,22 @@
+.page-header {
+    padding: 6rem 2rem;
+    & .h1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+
+        & .logo {
+            width: 3rem;
+            height: 3.5rem;
+            background-color: transparent;
+            background-size: cover;
+            background-image: url(../assets/logo-black-on-white.png);
+        }
+    }
+}
+
+.light-theme .page-header .h1 .logo {
+    background-image: url(../assets/logo-white-on-black.png);
+}

@@ -1,0 +1,73 @@
+:root {
+    --clr-light-blue: rgb(135, 206, 235);
+    --clr-lightest: white;
+    --clr-pale-grey: rgb(226, 226, 226);
+    --clr-pale-green-grey: rgb(201, 211, 211);
+    --clr-light-grey: #ccc;
+    --clr-mid: rgb(85, 85, 85);
+    --clr-light-green: rgb(239, 250, 250);
+    --clr-green: rgb(4, 167, 167);
+    --clr-blue-green: #084345;
+    --clr-grey-green: rgb(44, 58, 58);
+    --clr-dark-green: rgb(3, 94, 94);
+    --clr-dark-grey: rgb(77, 76, 76);
+    --clr-dark: rgb(30, 39, 39);
+    --clr-darker: #222;
+    --clr-darkest: black;
+    --clr-warning: red;
+    --clr-orange: orange;
+    --clr-transparent: transparent;
+    /* --highlight: var(--clr-light-blue); */
+    --highlight: var(--clr-orange);
+
+    /* Shared borders */
+    --border-radius-small: 0.5rem;
+    --border-radius-medium: 2rem;
+    --border-thin: 0.3rem solid var(--clr-green);
+    --border-thick: 0.5rem solid var(--clr-green);
+
+    --content-editable-border: var(--clr-green);
+
+    /* Dark theme (default) */
+    --loading-bg: var(--clr-dark);
+    --loading-txt: var(--clr-light-green);
+    --body-bg: var(--clr-blue-green);
+    --body-txt: var(--clr-light-green);
+    --header-footer-bg: var(--clr-darkest);
+    --header-footer-txt: var(--clr-lightest);
+    --theme-icon: var(--clr-lightest);
+    --theme-txt: var(--clr-lightest);
+    --form-border: var(--clr-dark-green);
+    --form-bg: var(--clr-grey-green);
+    --form-element-bg: var(--clr-darkest);
+    --form-element-text: var(--clr-lightest);
+    --form-placeholder: var(--clr-light-grey);
+    --content-editable-bg: var(--clr-darkest);
+    /* table */
+    --table-borders: var(--clr-dark-green);
+    --tr-th: var(--clr-darkest);
+    --tr-odd-bg: var(--clr-grey-green);
+    --tr-even-bg: var(--clr-dark);
+}
+
+.light-theme {
+    --loading-bg: var(--clr-light-green);
+    --loading-txt: var(--clr-darkest);
+    --body-bg: var(--clr-pale-green-grey);
+    --body-txt: var(--clr-darkest);
+    --header-footer-bg: var(--clr-lightest);
+    --header-footer-txt: var(--clr-darkest);
+    --theme-icon: var(--clr-orange);
+    --theme-txt: var(--clr-darkest);
+    --form-border: var(--clr-green);
+    --form-bg: var(--clr-light-green);
+    --form-element-bg: var(--clr-lightest);
+    --form-element-text: var(--clr-darkest);
+    --form-placeholder: var(--clr-dark-grey);
+    --content-editable-bg: var(--clr-light-green);
+    /* table */
+    --table-borders: var(--clr-pale-green-grey);
+    --tr-th: var(--clr-lightest);
+    --tr-odd-bg: var(--clr-light-green);
+    --tr-even-bg: var(--clr-lightest);
+}
