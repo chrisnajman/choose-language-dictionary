@@ -5,7 +5,6 @@ import Content from "./Content"
 import Footer from "./Footer"
 import AddLanguage from "./Dictionary/AddLanguage"
 import SkipLink from "./SkipLink"
-import PageLoader from "./PageLoader"
 
 function Page() {
   const { language } = useContext(DataContext)
@@ -18,7 +17,6 @@ function Page() {
 
   return (
     <>
-      <PageLoader />
       <AddLanguage />
 
       <div

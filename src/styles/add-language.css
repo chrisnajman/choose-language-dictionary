@@ -20,6 +20,7 @@
         gap: 1rem;
         align-items: center;
         justify-content: center;
+        text-align: center;
 
         & .logo {
             width: 3rem;
