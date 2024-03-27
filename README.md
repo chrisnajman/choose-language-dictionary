@@ -1,4 +1,4 @@
-# {Foreign Language} Dictionary
+# {Choose Language} Dictionary
 
 ## Description
 
@@ -6,11 +6,9 @@ In progress ...
 
 ---
 
-## Accessibility
+## Vite
 
----
-
-## Vite Setup
+### Setup
 
 I used the out-of-the-box setup to get React working in Vite.
 
@@ -23,9 +21,7 @@ Additionally, in order to generate unique ids, I installed:
 
 - [uuid](https://www.npmjs.com/package/uuid) from npm (Node Package Manager).
 
----
-
-## Deployment
+### Deployment
 
 See:
 
@@ -39,6 +35,16 @@ The first half of both the article and the video have the required steps for get
 ## Page Loading Spinner
 
 I customised the code [How to Create a Loading Animation in React from Scratch](https://stackabuse.com/how-to-create-a-loading-animation-in-react-from-scratch/) to implement the page-loading spinner.
+
+---
+
+## Accessibility
+
+### WAVE Web Accessibility Evaluation Tools Report
+
+- [Automated accessibility analysis results (passed)](https://wave.webaim.org/report#/https://chrisnajman.github.io/choose-language-dictionary/)
+
+---
 
 ## Testing
 
