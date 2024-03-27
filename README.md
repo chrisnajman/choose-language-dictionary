@@ -10,9 +10,9 @@ In progress ...
 
 ---
 
-## Vite
+## Vite Setup
 
-I've used the minimal setup to get React working in Vite with HMR and some ESLint rules.
+I used the out-of-the-box setup to get React working in Vite.
 
 This contains 2 official plugins:
 
@@ -35,6 +35,10 @@ See:
 The first half of both the article and the video have the required steps for getting a Vite app (without routing) on to Git Pages.
 
 ---
+
+## Page Loading Spinner
+
+I customised the code [How to Create a Loading Animation in React from Scratch](https://stackabuse.com/how-to-create-a-loading-animation-in-react-from-scratch/) to implement the page-loading spinner.
 
 ## Testing
 
