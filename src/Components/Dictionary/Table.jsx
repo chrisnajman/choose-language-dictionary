@@ -10,7 +10,7 @@ function Table() {
   return (
     <div
       role="region"
-      aria-labelledby="dictionary"
+      aria-labelledby="dictionary-entries"
       tabIndex="0"
       className="table-scroller"
     >
@@ -18,10 +18,7 @@ function Table() {
         id="dictionary-entries"
         className="dictionary-table"
       >
-        <caption
-          id="dictionary-entries"
-          className="visually-hidden"
-        >
+        <caption className="visually-hidden">
           Display Dictionary Entries
         </caption>
         <thead>

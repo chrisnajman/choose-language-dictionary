@@ -43,7 +43,7 @@ function AddRow() {
               required
               value={newItem}
               onChange={(e) => setNewItem(e.target.value)}
-              lang={langCode(language)}
+              lang={language ? langCode(language) : "en"}
             />
           </div>
           <div>
@@ -88,7 +88,7 @@ function AddRow() {
               placeholder="Add sample phrase or sentence (optional)"
               value={sampleSentence}
               onChange={handleSampleChange}
-              lang={langCode(language)}
+              lang={language ? langCode(language) : "en"}
             ></textarea>
           </div>
           <div>
@@ -98,7 +98,6 @@ function AddRow() {
               placeholder="Add notes (optional)"
               value={notes}
               onChange={handleNotesChange}
-              lang=""
             ></textarea>
           </div>
         </div>

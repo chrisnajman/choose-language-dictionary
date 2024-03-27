@@ -46,12 +46,7 @@ function Row() {
           <td>
             {item.notes ? (
               <div className="editable">
-                <p
-                  data-note
-                  lang=""
-                >
-                  {item.notes}
-                </p>
+                <p data-note>{item.notes}</p>
                 <button onClick={(e) => handleEditNotes(e, item.id)}>
                   Edit
                 </button>
