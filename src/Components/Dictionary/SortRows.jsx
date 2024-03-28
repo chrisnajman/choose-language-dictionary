@@ -18,27 +18,27 @@ function SortRows() {
       <SortButton
         handleOnClick={handleSortItemsAsc}
         items={items}
-        title="Sort words A-Z"
+        title="Sort by word A-Z"
       >
-        Sort <span className="visually-hidden">words A-Z (ascending)</span>
+        Sort by word <span className="visually-hidden">A-Z (ascending)</span>
         <FaSortAlphaDown aria-hidden="true" />
       </SortButton>
 
       <SortButton
         handleOnClick={handleSortItemsDesc}
         items={items}
-        title="Sort words Z-A"
+        title="Sort by word Z-A"
       >
-        Sort <span className="visually-hidden"> words Z-A (descending)</span>
+        Sort by word <span className="visually-hidden">Z-A (descending)</span>
         <FaSortAlphaUpAlt aria-hidden="true" />
       </SortButton>
 
       <SortButton
         handleOnClick={handleSortCatsAsc}
         items={items}
-        title="Group parts of speech A-Z"
+        title="Sort by category A-Z"
       >
-        Group parts of speech{" "}
+        Sort by category{" "}
         <span className="visually-hidden"> A-Z (ascending)</span>
         <FaSortAlphaDown aria-hidden="true" />
       </SortButton>
@@ -46,9 +46,9 @@ function SortRows() {
       <SortButton
         handleOnClick={handleSortCatsDesc}
         items={items}
-        title="Group parts of speech Z-A"
+        title="Sort by category Z-A"
       >
-        Group parts of speech{" "}
+        Sort by category{" "}
         <span className="visually-hidden">Z-A (descending)</span>
         <FaSortAlphaUpAlt aria-hidden="true" />
       </SortButton>

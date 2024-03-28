@@ -16,7 +16,7 @@ function ClearLocalStorageButton() {
   return (
     <div className="clear-local-storage">
       <button onClick={clearLocalStorage}>
-        Delete everything and return to the home screen <IoMdWarning />
+        Reset and return to home screen <IoMdWarning />
       </button>
     </div>
   )

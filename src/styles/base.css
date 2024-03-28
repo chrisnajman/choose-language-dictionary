@@ -129,8 +129,7 @@ textarea {
     gap: 8rem;
     overflow: hidden;
     padding-inline: 0;
-    padding-block-start: 8rem;
-    padding-block-end: clamp(10rem, 8.1579rem + 10.5263vw, 20rem);
+    padding-block: 8rem;
 }
 
 .page-footer {

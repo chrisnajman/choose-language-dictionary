@@ -1,8 +1,4 @@
 .clear-local-storage {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 3rem;
     display: flex;
     justify-content: center;
     padding-inline: 2rem;

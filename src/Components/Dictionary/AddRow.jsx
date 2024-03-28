@@ -62,7 +62,7 @@ function AddRow() {
           </div>
           <div>
             <label htmlFor="partOfSpeech">
-              Part of speech <span className="required">*</span>{" "}
+              Category <span className="required">*</span>{" "}
               <span className="visually-hidden">Required field</span>
             </label>
             <select

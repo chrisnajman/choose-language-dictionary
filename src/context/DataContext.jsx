@@ -59,7 +59,6 @@ export const DataProvider = ({ children }) => {
         return ""
     }
   }
-  // END SET LANGUAGE
 
   // FORM
   const addItem = (item, translation, category, sampleSentence, notes) => {
@@ -99,24 +98,54 @@ export const DataProvider = ({ children }) => {
     setNotes("")
   }
 
-  // END FORM
+  // SORT BUTTONS
+  const handleSort = (items, length, asc, sortBy) => {
+    if (items.length >= length) {
+      if (asc) {
+        const sortAsc = [...items].sort((a, b) =>
+          a[sortBy].localeCompare(b[sortBy])
+        )
+        setAndSaveItems(sortAsc)
+      } else {
+        const sortDesc = [...items].sort((a, b) =>
+          b[sortBy].localeCompare(a[sortBy])
+        )
+        setAndSaveItems(sortDesc)
+      }
+    }
+  }
+
+  const handleSortItemsAsc = () => {
+    handleSort(items, 2, true, "item")
+  }
+
+  const handleSortCatsAsc = () => {
+    handleSort(items, 2, true, "category")
+  }
+
+  const handleSortItemsDesc = () => {
+    handleSort(items, 2, false, "item")
+  }
+
+  const handleSortCatsDesc = () => {
+    handleSort(items, 2, false, "category")
+  }
 
   // TABLE ROW
-
-  const handleEditSample = (e, id) => {
+  const handleEdit = (e, id, targetAttribute, propertyName) => {
     const parent = e.target.closest(".word-row")
-    const sample = parent.querySelector("[data-sample]")
+    const target = parent.querySelector(`[data-${targetAttribute}]`)
 
     if (e.target.innerText === "Edit") {
       e.target.innerText = "Save edit"
-      sample.contentEditable = true
-      sample.focus()
+      target.contentEditable = true
+      target.focus()
     } else {
       e.target.innerText = "Edit"
-      sample.contentEditable = false
+      target.contentEditable = false
       const updatedItems = items.map((item) => {
         if (item.id === id) {
-          return { ...item, sampleSentence: sample.textContent.trim() }
+          return { ...item, [propertyName]: target.textContent.trim() }
         }
         return item
       })
@@ -124,25 +153,24 @@ export const DataProvider = ({ children }) => {
     }
   }
 
-  const handleEditNotes = (e, id) => {
-    const parent = e.target.closest(".word-row")
-    const note = parent.querySelector("[data-note]")
+  const handleEditWord = (e, id) => {
+    handleEdit(e, id, "word", "item")
+  }
 
-    if (e.target.innerText === "Edit") {
-      e.target.innerText = "Save edit"
-      note.contentEditable = true
-      note.focus()
-    } else {
-      e.target.innerText = "Edit"
-      note.contentEditable = false
-      const updatedItems = items.map((item) => {
-        if (item.id === id) {
-          return { ...item, notes: note.textContent.trim() }
-        }
-        return item
-      })
-      setAndSaveItems(updatedItems)
-    }
+  const handleEditTranslation = (e, id) => {
+    handleEdit(e, id, "translation", "translation")
+  }
+
+  const handleEditCategory = (e, id) => {
+    handleEdit(e, id, "category", "category")
+  }
+
+  const handleEditSample = (e, id) => {
+    handleEdit(e, id, "sample", "sampleSentence")
+  }
+
+  const handleEditNotes = (e, id) => {
+    handleEdit(e, id, "note", "notes")
   }
 
   const handleDelete = (id) => {
@@ -150,45 +178,6 @@ export const DataProvider = ({ children }) => {
     const listItems = items.filter((item) => item.id !== id)
     setAndSaveItems(listItems)
   }
-
-  // END TABLE ROW
-
-  // SORT BUTTONS
-  // Words
-  const handleSortItemsAsc = () => {
-    if (items.length >= 2) {
-      const itemsAsc = [...items].sort((a, b) => a.item.localeCompare(b.item))
-      setAndSaveItems(itemsAsc)
-    }
-  }
-
-  const handleSortItemsDesc = () => {
-    if (items.length >= 2) {
-      const itemsDesc = [...items].sort((a, b) => b.item.localeCompare(a.item))
-      setAndSaveItems(itemsDesc)
-    }
-  }
-
-  // categories
-
-  const handleSortCatsAsc = () => {
-    if (items.length >= 2) {
-      const catsAsc = [...items].sort((a, b) =>
-        a.category.localeCompare(b.category)
-      )
-      setAndSaveItems(catsAsc)
-    }
-  }
-
-  const handleSortCatsDesc = () => {
-    if (items.length >= 2) {
-      const catsDesc = [...items].sort((a, b) =>
-        b.category.localeCompare(a.category)
-      )
-      setAndSaveItems(catsDesc)
-    }
-  }
-  // end SORT BUTTONS
 
   return (
     <DataContext.Provider
@@ -206,6 +195,9 @@ export const DataProvider = ({ children }) => {
         handleSortItemsDesc,
         handleSortCatsAsc,
         handleSortCatsDesc,
+        handleEditWord,
+        handleEditTranslation,
+        handleEditCategory,
         handleEditNotes,
         handleEditSample,
         handleSampleChange,

@@ -25,10 +25,12 @@ function Table() {
           <tr className="table-headings">
             <th>Word</th>
             <th>Translation</th>
-            <th>Part of Speech</th>
+            <th>Category</th>
             <th>Sample phrase</th>
             <th>Notes</th>
-            <th>Delete</th>
+            <th>
+              <span className="visually-hidden">Delete</span>
+            </th>
           </tr>
         </thead>
         {items.length ? (

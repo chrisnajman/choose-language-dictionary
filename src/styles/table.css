@@ -4,14 +4,14 @@
 
 table {
     width: 100%;
-    max-width: 120rem;
-    min-width: 73.6rem; /* Fits Ipad Mini: At viewport width 768px, no scrollbars on table container */
+    max-width: 160rem;
+    min-width: 73.6rem;
     margin: 0 auto;
     border-collapse: collapse;
 
     & th,
     & td {
-        padding: 2rem 3rem;
+        padding: 2rem 1.5rem;
 
         &:last-child {
             border-right: 0;
@@ -51,24 +51,32 @@ table {
 
     & .editable {
         display: flex;
-        align-items: center;
-        gap: 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
 
         & p {
             min-width: 16rem;
         }
         & button {
             margin-left: auto;
+            border-width: 0 0 0.2rem 0;
+            border-radius: 0;
+            padding: 0.1rem 0.6rem;
+            text-align: center;
+            font-size: 1.6rem;
         }
     }
 
     & .delete-entry {
         margin: 0 auto;
+        border: none;
+        background-color: transparent;
+        padding: 0.1rem 0.6rem;
     }
 
     & [contenteditable="true"] {
         outline: 1px dotted var(--body-txt);
-        padding: 1rem;
+        padding-inline: 1rem;
     }
     & [contenteditable="false"] {
         outline: none;
@@ -92,4 +100,8 @@ table {
             }
         }
     }
+}
+
+.light-theme table .delete-entry svg {
+    fill: var(--clr-dark-green);
 }

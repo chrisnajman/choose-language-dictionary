@@ -1,14 +1,18 @@
 import PropTypes from "prop-types"
 import { useContext } from "react"
 import DataContext from "../../context/DataContext"
+import EditButton from "./EditButton"
 import { FaTrashAlt } from "react-icons/fa"
 
 function Row() {
   const {
     items,
     handleDelete,
+    handleEditWord,
+    handleEditTranslation,
     handleEditSample,
     handleEditNotes,
+    handleEditCategory,
     language,
     langCode,
   } = useContext(DataContext)
@@ -20,14 +24,45 @@ function Row() {
           key={item.id}
           id={item.id}
         >
-          <td
-            data-word
-            lang={langCode(language)}
-          >
-            {item.item}
+          <td>
+            {item.item ? (
+              <div className="editable">
+                <p
+                  data-word
+                  lang={langCode(language)}
+                >
+                  {item.item}
+                </p>
+                <EditButton
+                  handleOnClick={(e) => handleEditWord(e, item.id)}
+                  titleTerm="word"
+                />
+              </div>
+            ) : null}
           </td>
-          <td>{item.translation}</td>
-          <td>{item.category}</td>
+
+          <td>
+            {item.translation ? (
+              <div className="editable">
+                <p data-translation>{item.translation}</p>
+                <EditButton
+                  handleOnClick={(e) => handleEditTranslation(e, item.id)}
+                  titleTerm="translation"
+                />
+              </div>
+            ) : null}
+          </td>
+          <td>
+            {item.category ? (
+              <div className="editable">
+                <p data-category>{item.category}</p>
+                <EditButton
+                  handleOnClick={(e) => handleEditCategory(e, item.id)}
+                  titleTerm="category"
+                />
+              </div>
+            ) : null}
+          </td>
           <td>
             {item.sampleSentence ? (
               <div className="editable">
@@ -37,9 +72,10 @@ function Row() {
                 >
                   {item.sampleSentence}
                 </p>
-                <button onClick={(e) => handleEditSample(e, item.id)}>
-                  Edit
-                </button>
+                <EditButton
+                  handleOnClick={(e) => handleEditSample(e, item.id)}
+                  titleTerm="phrase"
+                />
               </div>
             ) : null}
           </td>
@@ -47,9 +83,10 @@ function Row() {
             {item.notes ? (
               <div className="editable">
                 <p data-note>{item.notes}</p>
-                <button onClick={(e) => handleEditNotes(e, item.id)}>
-                  Edit
-                </button>
+                <EditButton
+                  handleOnClick={(e) => handleEditNotes(e, item.id)}
+                  titleTerm="note"
+                />
               </div>
             ) : null}
           </td>
