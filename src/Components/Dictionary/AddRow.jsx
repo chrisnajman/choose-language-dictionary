@@ -39,7 +39,6 @@ function AddRow() {
             <input
               id="addWord"
               type="text"
-              // placeholder="Add word"
               required
               value={newItem}
               onChange={(e) => setNewItem(e.target.value)}
@@ -54,7 +53,6 @@ function AddRow() {
             <input
               id="translateWord"
               type="text"
-              // placeholder="Add translation"
               required
               value={translation}
               onChange={(e) => setTranslation(e.target.value)}
@@ -71,7 +69,7 @@ function AddRow() {
               value={category}
               onChange={handleCategoryChange}
             >
-              <option value="">Select an option</option>
+              <option value="">Select</option>
               <option value="Verb">Verb</option>
               <option value="Pronoun">Pronoun</option>
               <option value="Noun">Noun</option>
