@@ -71,11 +71,13 @@ function AddRow() {
             >
               <option value="">Select</option>
               <option value="Verb">Verb</option>
-              <option value="Pronoun">Pronoun</option>
               <option value="Noun">Noun</option>
-              <option value="Article">Article</option>
+              <option value="Pronoun">Pronoun</option>
               <option value="Adjective">Adjective</option>
               <option value="Adverb">Adverb</option>
+              <option value="Article">Article</option>
+              <option value="Preposition">Preposition</option>
+              <option value="Conjunction">Conjunction</option>
               <option value="Other">Other</option>
             </select>
           </div>
