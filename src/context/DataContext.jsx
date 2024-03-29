@@ -19,8 +19,8 @@ export const DataProvider = ({ children }) => {
   const [newItem, setNewItem] = useState("")
   const [translation, setTranslation] = useState("")
   const [category, setCategory] = useState("")
-  const [sampleSentence, setSampleSentence] = useState("")
-  const [notes, setNotes] = useState("")
+  const [sampleSentence, setSampleSentence] = useState("...")
+  const [notes, setNotes] = useState("...")
   const [, setIsLanguageSelected] = useState(false)
 
   const setAndSaveItems = (newItems) => {
@@ -43,8 +43,6 @@ export const DataProvider = ({ children }) => {
 
   const langCode = (language) => {
     switch (language) {
-      case "English":
-        return "en"
       case "French":
         return "fr"
       case "German":
@@ -94,8 +92,8 @@ export const DataProvider = ({ children }) => {
     setNewItem("")
     setTranslation("")
     setCategory("")
-    setSampleSentence("")
-    setNotes("")
+    setSampleSentence("...")
+    setNotes("...")
   }
 
   // SORT BUTTONS

@@ -19,7 +19,7 @@
 
 ## Description
 
-If you're learning one of the selected languages, you can use this app to make a word list.
+If you're learning one of the selected languages, you can use this app as an aid to make a word list.
 
 The app, built with Vite/React, has the following features:
 
@@ -47,13 +47,11 @@ Furthermore, the following elements will have the correct `lang` attribute:
 
 - 'Add word' `input`.
 - 'Sample phrase or sentence' `textarea`.
-- 'Notes' `textarea`.
 
 ### On Entries Table Cells
 
 - 'Word' `cell`.
 - 'Sample phrase' `cell`.
-- 'Notes' `cell`.
 
 ---
 
@@ -64,6 +62,9 @@ Furthermore, the following elements will have the correct `lang` attribute:
 - Choose category from the select dropdown. If it isn't present, choose 'Other' (required).
 - Add an optional phrase or sentence in the defined language.
 - Add an optional note.
+
+> [!NOTE]
+> Optional phrase and note are pre-populated with the string `"..."`. This ensures that a note or phrase can be added to the entry after form submission.
 
 ---
 
@@ -80,22 +81,27 @@ These buttons are disabled by default. They only become operative after 2 or mor
 - Edit category. If you previously chose 'Other' from the select dropdown, you can enter the specific category here.
 - Edit optional phrase or sentence.
 - Edit optional note.
-- Delete entry.
 
-> [!IMPORTANT]
-> Deleting entries will permanently delete them from local storage.
+- Delete entry. Clicking this button will launch a 'confirm' dialog.
+
+> [!CAUTION]
+> Deleting an entry will permanently delete it from local storage.
 
 ### Delete All Entries? Button
 
-> [!IMPORTANT]
-> Deleting all entries will permanently delete them from local storage.
+Clicking this button will launch a 'confirm' dialog.
+
+> [!CAUTION]
+> Clicking 'confirmj' will permanently delete all entries from local storage.
 
 ---
 
 ## Reset and Return to Home Screen Button
 
-> [!IMPORTANT]
-> Clicking this will delete language settings and any/all entries from local storage and you will be returned to the 'Select Language' home screen.
+Clicking this button will launch a 'confirm' dialog.
+
+> [!CAUTION]
+> Clicking 'confirm' will delete language settings and any/all entries from local storage and you will be returned to the 'Select Language' home screen.
 
 ---
 

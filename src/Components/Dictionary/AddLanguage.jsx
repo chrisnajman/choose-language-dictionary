@@ -39,10 +39,7 @@ function AddLanguage() {
         <span>&#x7B;Choose Language&#x7D; Dictionary</span>
       </h1>
 
-      <p>
-        To create a specific language dictionary, select one from the dropdown
-        menu.
-      </p>
+      <p>To create a dictionary, choose a language from the dropdown menu.</p>
 
       <form>
         <div>
@@ -58,7 +55,6 @@ function AddLanguage() {
             value={selectedLanguage}
           >
             <option value="">Select Language</option>
-            <option value="English">English</option>
             <option value="French">French</option>
             <option value="German">German</option>
             <option value="Italian">Italian</option>

@@ -69,10 +69,15 @@ img {
 }
 
 button,
+input,
+textarea {
+    all: unset;
+}
+
+button,
 select,
 textarea,
 input {
-    all: unset;
     font-family: inherit;
     font-size: inherit;
     color: inherit;

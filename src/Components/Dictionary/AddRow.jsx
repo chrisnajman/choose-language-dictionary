@@ -39,7 +39,7 @@ function AddRow() {
             <input
               id="addWord"
               type="text"
-              placeholder="Add word"
+              // placeholder="Add word"
               required
               value={newItem}
               onChange={(e) => setNewItem(e.target.value)}
@@ -54,7 +54,7 @@ function AddRow() {
             <input
               id="translateWord"
               type="text"
-              placeholder="Add translation"
+              // placeholder="Add translation"
               required
               value={translation}
               onChange={(e) => setTranslation(e.target.value)}
@@ -85,7 +85,6 @@ function AddRow() {
             <label htmlFor="sampleSentence">Sample phrase or sentence</label>
             <textarea
               id="sampleSentence"
-              placeholder="Add sample phrase or sentence (optional)"
               value={sampleSentence}
               onChange={handleSampleChange}
               lang={language ? langCode(language) : "en"}
@@ -95,7 +94,6 @@ function AddRow() {
             <label htmlFor="notes">Notes</label>
             <textarea
               id="notes"
-              placeholder="Add notes (optional)"
               value={notes}
               onChange={handleNotesChange}
             ></textarea>
