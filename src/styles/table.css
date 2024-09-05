@@ -1,0 +1,107 @@
+.table-scroller {
+    margin: 0 2rem;
+}
+
+table {
+    width: 100%;
+    max-width: 160rem;
+    min-width: 73.6rem;
+    margin: 0 auto;
+    border-collapse: collapse;
+
+    & th,
+    & td {
+        padding: 2rem 1.5rem;
+
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    & th {
+        border-right: 3px solid var(--table-borders);
+        font-weight: 600;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    & td {
+        border-color: var(--table-borders);
+        border-width: 0 3px 3px 0;
+        border-style: solid;
+        &:last-child {
+            border-right: 0;
+        }
+    }
+
+    & .table-headings {
+        background-color: var(--tr-th);
+        border-bottom: 3px solid var(--table-borders);
+    }
+
+    & .tbody {
+        & tr:nth-child(odd) {
+            background-color: var(--tr-odd-bg);
+        }
+        & tr:nth-child(even) {
+            background-color: var(--tr-even-bg);
+        }
+    }
+
+    & .editable {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        & p {
+            min-width: 16rem;
+        }
+        & button {
+            margin-left: auto;
+            border-width: 0 0 0.2rem 0;
+            border-radius: 0;
+            padding: 0.1rem 0.6rem;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+    }
+
+    & .delete-entry {
+        margin: 0 auto;
+        border: none;
+        background-color: transparent;
+        padding: 0.1rem 0.6rem;
+    }
+
+    & [contenteditable="true"] {
+        outline: 1px dotted var(--body-txt);
+        padding-inline: 1rem;
+    }
+    & [contenteditable="false"] {
+        outline: none;
+        padding: inherit;
+    }
+    /** Fixes an overflow failure on mobile **/
+    & .visually-hidden {
+        top: -1000px;
+        left: -1000px;
+    }
+
+    & .tfoot {
+        background-color: var(--tr-th);
+        text-align: center;
+
+        &.delete-all-rows-button {
+            border-top: 3px solid var(--table-borders);
+
+            & button {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.light-theme table .delete-entry svg {
+    fill: var(--clr-dark-green);
+}

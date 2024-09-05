@@ -1,0 +1,38 @@
+.add-language {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    height: 100dvh;
+
+    &.hide {
+        display: none;
+    }
+
+    & p {
+        text-align: center;
+        text-wrap: balance;
+        max-width: 60ch;
+    }
+
+    & h1 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        & .logo {
+            width: 3rem;
+            height: 3.5rem;
+            background-color: transparent;
+            background-size: cover;
+            background-image: url(../assets/logo-black-on-white.png);
+        }
+    }
+
+    & select {
+        background-color: var(--clr-darkest);
+        border: 1px solid var(--clr-lightest);
+    }
+}

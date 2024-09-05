@@ -1,0 +1,49 @@
+.add-word {
+    --_content-max-width: 127rem;
+    --_content-space-outside: 2rem;
+    width: min(var(--_content-max-width), 100% - var(--_content-space-outside) * 2);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    border-radius: 1rem;
+    border: 3px solid var(--form-border);
+    background-color: var(--form-bg);
+    color: var(--form-element-text);
+
+    & .form-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-block-end: 3rem;
+
+        & > * {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            @media screen and (width <= 645px) {
+                width: 100%;
+            }
+        }
+    }
+
+    & button {
+        margin-left: auto;
+    }
+
+    & input,
+    & select,
+    & textarea {
+        background-color: var(--form-element-bg);
+        border: 1px solid var(--form-element-text);
+    }
+
+    & input::placeholder,
+    & textarea::placeholder {
+        color: var(--form-placeholder);
+        opacity: 0.8;
+    }
+}
